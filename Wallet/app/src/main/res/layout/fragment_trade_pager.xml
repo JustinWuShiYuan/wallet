@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+
+    >
+
+    <android.support.design.widget.TabLayout
+        app:layout_constraintTop_toBottomOf="@id/cl_root_view"
+        android:id="@+id/tab_layout_my_trade"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:tabIndicatorColor="#232630"
+        app:tabSelectedTextColor="#587BFC"
+        app:tabTextColor="#4A4A4A"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        android:layout_margin="10dp"
+        app:tabPaddingStart="25dp"
+        app:tabPaddingEnd="25dp"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+        />
+
+
+    <View
+        android:id="@+id/empty_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#F6F5FA"
+        app:layout_constraintHeight_percent="0.016"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout_my_trade"/>
+
+
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_my_trade"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/empty_line_1"
+        android:layout_marginTop="2dp"
+        app:layout_constraintHeight_percent="0.82"
+        android:paddingBottom="5dp"
+        />
+
+
+
+</android.support.constraint.ConstraintLayout>

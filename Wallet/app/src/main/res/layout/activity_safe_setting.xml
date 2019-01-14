@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SafeSettingActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        />
+
+
+    <FrameLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/fl_safe_setting_pager_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+    </FrameLayout>
+
+</LinearLayout>

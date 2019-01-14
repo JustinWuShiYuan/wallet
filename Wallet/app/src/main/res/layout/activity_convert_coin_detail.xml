@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".activity.ConvertCoinDetailActivity">
+
+    <include layout="@layout/title_bar2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        />
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/cl_root_view"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#F0F1F3"
+        android:id="@id/tv_1"/>
+
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        >
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0F1F3"/>
+        <!--style="@style/main_tab_style"-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_6"
+                android:textSize="15sp"
+                android:text="兑换币种:"
+                android:id="@+id/tv_1"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_3"
+                android:textSize="15sp"
+                android:text="AB/BTC"
+                android:id="@+id/tv_exchange_coin_type"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_6"
+                android:textSize="15sp"
+                android:text="汇率:"
+                android:id="@+id/tv_2"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_3"
+                android:textSize="15sp"
+                android:text="1 AB = 0.000001 BTC"
+                android:id="@+id/tv_rate"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_6"
+                android:textSize="15sp"
+                android:text="兑换数量:"
+                android:id="@+id/tv_3"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_3"
+                android:textSize="15sp"
+                android:text="100 AB"
+                android:id="@+id/tv_exchanged_num"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_6"
+                android:textSize="15sp"
+                android:text="收到BTC数量:"
+                android:id="@+id/tv_get_btc_num"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_3"
+                android:textSize="15sp"
+                android:text="0.003 BTC"
+                android:id="@+id/tv_get_coin_num"
+                />
+
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0F1F3"/>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_6"
+                android:textSize="15sp"
+                android:text="提交时间:"
+
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_3"
+                android:textSize="15sp"
+                android:text="2018-10-19 12:00:12"
+                android:id="@+id/tv_order_submit_time"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_6"
+                android:textSize="15sp"
+                android:text="兑换状态:"
+
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_3"
+                android:textSize="15sp"
+                android:text="已汇出"
+                android:id="@+id/tv_order_status_exchanged"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_6"
+                android:textSize="15sp"
+                android:text="BTC收币地址:"
+
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_3"
+                android:textSize="15sp"
+                android:text="1dgadjg38509HFli"
+                android:id="@+id/tv_btc_address"
+                />
+
+        </RelativeLayout>
+
+
+
+        <!--Txid 模块开始 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:id="@+id/rl_txid_container"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_6"
+                android:textSize="15sp"
+                android:text="Txid:"
+
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_3"
+                android:textSize="15sp"
+                android:text="49tojh49GHTGloinadkjsuiyghajskdgh0-0q3894t6"
+                android:lines="2"
+                android:id="@+id/tv_txid"
+                />
+
+        </RelativeLayout>
+        <!--Txid 模块结束 -->
+
+
+        <!--驳回 模块开始 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:visibility="gone"
+            android:id="@+id/rl_reject_container">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_6"
+                android:textSize="15sp"
+                android:text="驳回原因:"
+
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_3"
+                android:textSize="15sp"
+                android:text="余额不足"
+                android:id="@+id/tv_reject_info"
+                />
+
+        </RelativeLayout>
+        <!--驳回 模块结束 -->
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginBottom="1dp"
+        android:gravity="center"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/shape_blue_bg"
+        android:textColor="@color/white1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/checkTexid"
+        android:id="@+id/tv_cancel_exchange_or_check_txid"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_style_17sp_black1"
+        android:text="是否开启验证"/>
+
+
+
+    <com.suke.widget.SwitchButton
+        android:layout_marginTop="18dp"
+        xmlns:switchButton="http://schemas.android.com/apk/res-auto"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:id="@+id/switch_button_zfb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        switchButton:sb_checked_color="@color/colorBlue2"
+        />
+    
+    
+    
+    <TextView
+        android:id="@+id/tv_cancel_current_bind"
+        android:gravity="center"
+        android:layout_marginTop="123dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="解除当前绑定"
+        android:textSize="15sp"
+        android:textColor="@color/white1"
+        android:background="@drawable/shape_blue_bg"/>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#F6F5FA"
+        android:id="@+id/line5"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_15sp_gray_7"
+            android:text="出售AB"/>
+
+        <TextView
+            android:id="@+id/tv_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_15sp_gray_8"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22dp"
+            android:text="已完成"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F6F5FA"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_13sp_gray_6"
+            android:text="买方: www"
+            android:id="@+id/tv_buyer_name"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tv_buyer_name"
+            android:src="@drawable/icon_vip"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:layout_marginLeft="-3dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_13sp_gray_6"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22dp"
+            android:text="放币数量:4897"
+            android:id="@+id/tv_to_sale_coin_num"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_13sp_gray_6"
+            android:text="支付方式:"
+            android:id="@+id/tv_payment_way"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tv_payment_way"
+            android:src="@drawable/icon_cir_wechat"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:layout_marginLeft="-3dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_payment_way"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_13sp_gray_6"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22dp"
+            android:text="应收款:456546CNY"
+            android:id="@+id/tv_should_get_money"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_13sp_gray_6"
+            android:text="2018.12.23"
+            android:id="@+id/tv_order_time"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_13sp_gray_6"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22dp"
+            android:text="付款参考号:758396"
+            android:id="@+id/tv_order_code"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/rl_handle_order_root_view">
+
+        <View
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F6F5FA"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_handle_order"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            style="@style/text_style_14sp_red"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22dp"
+            android:text="提醒付款"
+            android:background="@drawable/shape_red_bg"
+            />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

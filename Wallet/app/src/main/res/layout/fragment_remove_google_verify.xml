@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_90"
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/text_style_20sp_black"
+        android:text="输入谷歌验证码"
+        android:gravity="center"
+        />
+
+
+    <FrameLayout
+        android:layout_below="@id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:id="@+id/fl_container"
+        android:gravity="center">
+
+        <EditText
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/et_input_code"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:visibility="visible"/>
+
+        <!--验证码输入栏  -->
+        <LinearLayout
+            android:id="@+id/ll_display_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/shape_white2_bg"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/tv_code_1"
+                style="@style/code_text_style"/>
+
+            <ImageView
+                style="@style/vertical_line_style"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/tv_code_2"
+                style="@style/code_text_style"/>
+
+            <ImageView
+                style="@style/vertical_line_style"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/tv_code_3"
+                style="@style/code_text_style"/>
+
+            <ImageView
+                style="@style/vertical_line_style"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/tv_code_4"
+                style="@style/code_text_style"/>
+
+            <ImageView
+                style="@style/vertical_line_style"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/tv_code_5"
+                style="@style/code_text_style"/>
+
+
+            <ImageView
+                style="@style/vertical_line_style"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/tv_code_6"
+                style="@style/code_text_style"/>
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <!--下一步按钮-->
+    <TextView
+        android:id="@+id/tv_remove_bind"
+        android:layout_below="@id/fl_container"
+        android:layout_marginTop="92dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rc_dimen_size_50"
+        android:textColor="@color/white1"
+        android:textSize="15sp"
+        android:text="解除当前绑定"
+        android:background="@drawable/shape_blue_bg"
+        android:gravity="center"/>
+
+</RelativeLayout>
+

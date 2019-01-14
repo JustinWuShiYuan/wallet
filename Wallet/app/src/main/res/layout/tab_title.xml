@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/ll_tab_title_root">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:id="@+id/rl_trade_limit_title">
+
+        <TextView
+            android:id="@+id/tv_trade_limit_title"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="@string/singleTradeLimit"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlue"
+            />
+
+        <View
+            android:id="@+id/line_trade_limit_title"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="#587BFC"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="37dp"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:id="@+id/rl_trade_constant_title">
+
+        <TextView
+            android:id="@+id/tv_trade_constant_title"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="@string/singleTradeLimit"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/gray_6"/>
+
+        <View
+            android:id="@+id/line_trade_constant_title"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="#587BFC"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="37dp"
+            android:textColor="@color/gray_4"
+            android:visibility="invisible"
+           />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

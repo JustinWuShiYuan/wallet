@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.LoginActivity"
+        android:background="@color/colorWhite">
+
+
+        <TextView
+            android:id="@+id/tv_welcome_login"
+            android:paddingTop="60dp"
+            android:background="@drawable/icon_login_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="220dp"
+            android:text="欢迎登录"
+            android:textSize="30sp"
+            android:gravity="center|top"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorWhite"/>
+
+
+        <TextView
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="-25dp"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/tv_welcome_login"
+            android:id="@+id/tv_input_account_name"
+            style="@style/text_style_17sp_black1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入账户名" />
+
+
+        <EditText
+            android:id="@+id/et_input_account"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="35dp"
+            style="@style/text_style_13sp_black1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/tv_input_account_name"
+            android:gravity="left|center_vertical"
+            android:text="Justin1"/>
+
+
+
+
+        <TextView
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/et_input_account"
+            android:id="@+id/tv_input_account_pwd"
+            style="@style/text_style_17sp_black1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入账户密码" />
+
+
+        <EditText
+            android:id="@+id/et_input_account_pwd"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="35dp"
+            style="@style/text_style_13sp_black1"
+            android:layout_width="match_parent"
+            android:gravity="left|center_vertical"
+            android:layout_height="60dp"
+            android:layout_below="@id/tv_input_account_pwd"
+            android:text="Justin123456"
+            android:inputType="textPassword"/>
+
+
+
+
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_70"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_blue_bg_round10"
+            android:textColor="@color/colorWhite"
+            android:text="确认登录"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aaE9E8F0"
+        android:id="@+id/rl_logining_root_view"
+        android:visibility="gone"
+        >
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/progress_big" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pb"
+            android:gravity="center_horizontal"
+            android:text="登录中..."
+            android:textSize="18sp"
+            android:textColor="@color/gray_3"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SecondVerifyActivity"
+    android:background="@color/colorWhite">
+
+
+    <TextView
+        android:id="@+id/tv_second_verify"
+        android:paddingTop="60dp"
+        android:background="@drawable/icon_login_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:text="二次验证"
+        android:textSize="30sp"
+        android:gravity="center|top"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"/>
+
+
+
+
+    <TextView
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="-25dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/tv_second_verify"
+        android:id="@+id/tv_input_account_name"
+        style="@style/text_style_17sp_black1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入谷歌验证码" />
+
+
+    <EditText
+        android:id="@+id/et_input_google_verify_code_second"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="35dp"
+        style="@style/text_style_13sp_black1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/tv_input_account_name"
+        android:gravity="left|center_vertical"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/tv_login_second"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_70"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_blue_bg_round10"
+        android:textColor="@color/colorWhite"
+        android:text="确认登录"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+
+
+</RelativeLayout>

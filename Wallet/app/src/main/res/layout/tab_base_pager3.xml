@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include layout="@layout/title_bar2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_other_service"
+        android:layout_below="@id/cl_root_view"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_order_inform">
+
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/icon_mess_order"
+                android:id="@+id/iv_order_inform"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/rc_dimen_size_6"
+                android:layout_below="@id/iv_order_inform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_style_13sp_black1"
+                android:text="@string/order_inform"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_connect_service">
+
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/icon_mess_service"
+                android:id="@+id/iv_connect_service"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/rc_dimen_size_6"
+                android:layout_below="@id/iv_connect_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_style_13sp_black1"
+                android:text="@string/connect_service"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_system_inform">
+
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/icon_mess_system"
+                android:id="@+id/iv_system_inform"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/rc_dimen_size_6"
+                android:layout_below="@id/iv_system_inform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_style_13sp_black1"
+                android:text="@string/system_inform"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_below="@id/ll_other_service"
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorGray"/>
+
+
+
+    <FrameLayout
+        android:layout_below="@id/line1"
+        android:id="@+id/fl_tab_message_pager_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+    </FrameLayout>
+
+
+    <ImageView
+        android:layout_marginRight="-20dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/iv_create_advertisement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/icon_user_alter"
+        android:visibility="gone"/>
+
+</RelativeLayout>

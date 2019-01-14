@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/white1"
+    android:id="@+id/cl_root_view"
+    >
+
+    <TextView
+        android:id="@+id/tv_title_bar_title2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="默认标题"
+        android:textColor="@color/gray_3"
+        android:textSize="20sp"
+        android:gravity="center"
+        />
+
+
+    <FrameLayout
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/fl_back">
+
+        <ImageButton
+            android:id="@+id/iv_title_bar_menu2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:scaleY="0.5"
+            android:scaleX="0.5"
+            android:layout_marginLeft="10dip"
+            android:background="@android:color/transparent"
+            android:src="@drawable/img_menu"
+           />
+
+    </FrameLayout>
+
+
+    <!--android:background="@android:color/transparent"-->
+    <FrameLayout
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="match_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/fl_add">
+
+        <ImageButton
+            android:id="@+id/iv_title_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:scaleY="0.5"
+            android:scaleX="0.5"
+            android:layout_marginLeft="10dip"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_add"
+           />
+
+    </FrameLayout>
+
+
+</android.support.constraint.ConstraintLayout>

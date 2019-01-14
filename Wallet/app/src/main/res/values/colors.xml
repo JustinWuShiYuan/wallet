@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorRead">#D02A2A</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGray">#F6F5FA</color>
+    <color name="colorOrange">#EB831D</color>
+    <color name="colorBlue">#587BFC</color>
+    <color name="colorBlue2">#4C7FFF</color>
+    <color name="colorBlue3">#394368</color>
+    <color name="colorBlue4">#EDF2FF</color>
+    <color name="colorBlue5">#394369</color>
+    <color name="black">#000000</color>
+    <color name="black1">#232630</color>
+    <color name="gray_1">#F2F1F6</color>
+    <color name="gray_3">#333333</color>
+    <color name="gray_31">#313131</color>
+    <color name="gray_2">#9B9B9B</color>
+    <color name="gray_4">#666666</color>
+    <color name="gray_5">#E9E8F0</color>
+    <color name="gray_6">#666666</color>
+    <color name="gray_7">#394368</color>
+    <color name="gray_8">#8C96A5</color>
+    <color name="gray_9">#F0F1F3</color>
+    <color name="gray_10">#F2F1F6</color>
+    <color name="gray_11">#999999</color>
+    <color name="gray_12">#C6C6C6</color>
+    <color name="yellow">#FF9238</color>
+    <color name="white1">#ffffff</color>
+    <color name="lineColor">#E8E9ED</color>
+</resources>

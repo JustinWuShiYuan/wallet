@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#F6F5FA"
+        android:id="@+id/line5"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_15sp_gray_7"
+            android:id="@+id/tv_trade_id"
+            android:text="广告ID:20182222"/>
+
+        <TextView
+            android:id="@+id/tv_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_15sp_gray_8"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22dp"
+            android:text="上架中"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F0F1F3"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_style_13sp_blue2"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:background="@color/colorBlue4"
+        android:text="类型:固额"
+        android:id="@+id/tv_trade_type"/>
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_style_14sp_gray_6"
+        android:text="库存:299"
+        android:id="@+id/tv_remain_num"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_14sp_gray_6"
+            android:text="销量: 999"
+            android:id="@+id/tv_sales_count"/>
+
+
+        <ImageView
+            android:id="@+id/iv_cir_bank"
+            android:layout_marginRight="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/icon_cir_bank"
+            android:visibility="invisible"/>
+
+
+        <ImageView
+            android:id="@+id/iv_cir_wechat"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/iv_cir_bank"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/icon_cir_wechat"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/iv_cir_zfb"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/iv_cir_wechat"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/icon_cir_zfb"
+            android:visibility="invisible"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_13sp_gray_6"
+            android:layout_toLeftOf="@id/iv_cir_zfb"
+            android:layout_marginRight="5dp"
+            android:text="支付方式:"
+            android:id="@+id/tv_payment_ways" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F0F1F3"/>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/tv_publish_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            style="@style/text_style_11sp_gray_6"
+            android:text="发布时间: 2018-02-10 09:23"/>
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tv_publish_time"
+            android:id="@+id/tv_last_change_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            style="@style/text_style_11sp_gray_6"
+            android:text="最后修改时间: 2018-02-10 09:23"/>
+
+
+        <TextView
+            android:layout_marginRight="10dp"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:text="下架"
+            style="@style/text_style_13sp_withe1"
+            android:background="@drawable/shape_blue_bg"
+            android:id="@+id/tv_sold_out"
+            />
+
+
+        <TextView
+            android:layout_marginRight="10dp"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_toLeftOf="@id/tv_sold_out"
+            android:text="上架"
+            style="@style/text_style_13sp_blue2"
+            android:background="@drawable/shape_blue1_bg"
+            android:id="@+id/tv_sold_in"
+            />
+
+
+        <TextView
+            android:layout_marginRight="10dp"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_toLeftOf="@id/tv_sold_in"
+            android:text="编辑"
+            style="@style/text_style_13sp_blue2"
+            android:background="@drawable/shape_blue1_bg"
+            android:id="@+id/tv_compile"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

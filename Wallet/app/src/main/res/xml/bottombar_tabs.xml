@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <tabs>
+        <tab
+            id="@+id/tab_home"
+            icon="@drawable/tab_home_bg"
+            title="首页" />
+        <tab
+            id="@+id/tab_trade"
+            icon="@drawable/tab_trade_bg"
+            title="交易" />
+        <tab
+            id="@+id/tab_message"
+            icon="@drawable/tab_message_bg"
+            title="消息" />
+        <tab
+            id="@+id/tab_myinfo"
+            icon="@drawable/tab_myinfo_bg"
+            title="我的" />
+    </tabs>
+</resources>

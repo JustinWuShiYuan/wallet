@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:background="@color/colorWhite"
+    android:id="@+id/rl_item_root_view"
+    >
+
+
+    <com.suke.widget.SwitchButton
+        xmlns:switchButton="http://schemas.android.com/apk/res-auto"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="6dp"
+        android:id="@+id/switch_button_zfb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        switchButton:sb_checked_color="@color/colorBlue2"
+        android:scaleX="0.6"
+        android:scaleY="0.6"/>
+
+
+    <ImageView
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/icon_zfb"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="18dp"
+        android:id="@+id/iv_payment_icon"/>
+
+
+    <TextView
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@id/iv_payment_icon"
+        android:layout_marginLeft="11dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_style_20sp_black"
+        android:text="支付宝"
+        android:id="@+id/tv_payment_type"/>
+
+
+    <TextView
+        android:layout_alignLeft="@id/tv_payment_type"
+        android:layout_below="@id/tv_payment_type"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_style_20sp_blue5"
+        android:id="@+id/tv_account_num"
+        android:text="1232 3254 5465 3524"/>
+
+
+
+</RelativeLayout>
+
+
+

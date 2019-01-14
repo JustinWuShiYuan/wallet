@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MyAssetActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar2"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        />
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/user_property_bg"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_my_coin"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="37sp"
+                android:text="1,000.00"
+                android:id="@+id/tv_my_coin"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:textSize="24sp"
+                android:text="AB"
+                android:layout_marginBottom="6dp"
+                android:layout_alignBottom="@id/tv_my_coin"
+                android:layout_toRightOf="@id/tv_my_coin"
+                android:layout_marginLeft="@dimen/rc_dimen_size_5"/>
+
+
+        </RelativeLayout>
+
+
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_my_coin"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:text="折合人民币 100.00 ￥"
+            android:id="@+id/tv_my_money"/>
+
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        style="@style/text_style_20sp_blue"
+        android:text="资产变更记录"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/text_style_20sp_black"
+            android:gravity="center_horizontal"
+            android:text="可用"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/text_style_20sp_black"
+            android:gravity="center_horizontal"
+            android:text="保证金"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/text_style_20sp_black"
+            android:gravity="center_horizontal"
+            android:text="交易中"/>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/text_style_20sp_black"
+            android:gravity="center_horizontal"
+            android:id="@+id/tv_can_used_money"
+            android:text="100"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/text_style_20sp_black"
+            android:gravity="center_horizontal"
+            android:id="@+id/tv_margin_money"
+            android:text="5000"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/text_style_20sp_black"
+            android:gravity="center_horizontal"
+            android:id="@+id/tv_trading_money"
+            android:text="500000"/>
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_trade_list"/>
+
+</LinearLayout>

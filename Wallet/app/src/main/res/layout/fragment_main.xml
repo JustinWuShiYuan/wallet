@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <com.tong.gao.wallet.view.NoScrollViewPager
+        android:id="@+id/vp_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+
+    <!--<com.roughike.bottombar.BottomBar-->
+        <!--android:id="@+id/bottomBar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--app:layout_constraintHeight_percent="0.15"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:bb_tabXmlResource="@xml/bottombar_tabs"-->
+        <!--/>-->
+
+    <View
+        android:id="@+id/empty_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#F6F5FA"
+        app:layout_constraintBottom_toTopOf="@id/rg_fragment_container"/>
+
+    <RadioGroup
+        android:id="@+id/rg_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#ffffff"
+        >
+
+
+        <RadioButton
+            android:id="@+id/rb_fragment_home"
+            style="@style/main_tab_style"
+            android:drawableTop="@drawable/tab_home_bg"
+            android:text="@string/home"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_fragment_trade"
+            style="@style/main_tab_style"
+            android:drawableTop="@drawable/tab_trade_bg"
+            android:text="@string/deal"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_fragment_message"
+            style="@style/main_tab_style"
+            android:drawableTop="@drawable/tab_message_bg"
+            android:text="@string/message"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_fragment_myInfo"
+            style="@style/main_tab_style"
+            android:drawableTop="@drawable/tab_myinfo_bg"
+            android:text="@string/myInfo"
+            />
+
+    </RadioGroup>
+
+
+</android.support.constraint.ConstraintLayout>

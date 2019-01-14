@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="textSize" format="dimension|reference"/>
+    <attr name="textColor" format="color"/>
+
+
+    <declare-styleable name="ChartView">
+        <attr name="max_score" format="integer"/>
+        <attr name="min_score" format="integer"/>
+        <attr name="monthCount" format="integer"/>
+        <attr name="broken_line_color" format="color"/>
+        <attr name="textColor"/>
+        <attr name="textSize"/>
+        <attr name="dottedlineColor" format="color"/>
+    </declare-styleable>
+
+</resources>

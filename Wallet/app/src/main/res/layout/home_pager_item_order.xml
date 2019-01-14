@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_pending_order_container"
+    android:layout_marginLeft="15dp"
+    >
+    
+    <TextView
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.027"
+        android:id="@+id/tv_order_time"
+        android:text="2018-09-09 11:11:01"
+        android:textSize="13sp"
+        android:textColor="#9B9B9B"
+        />
+
+    <TextView
+        android:layout_marginLeft="8dp"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.027"
+        android:id="@+id/tv_order_count_down"
+        app:layout_constraintLeft_toRightOf="@id/tv_order_time"
+        android:text="倒计时："
+        android:textColor="#9B9B9B"
+        android:textSize="13sp"
+        />
+
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.027"
+        android:id="@+id/tv_order_count_down_time"
+        app:layout_constraintLeft_toRightOf="@id/tv_order_count_down"
+        android:text="10:20"
+        android:textColor="@color/colorOrange"
+        android:textSize="13sp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_user_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_order_time"
+        android:textStyle="bold"
+        android:text="Abtest12"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_buy_coin"
+        app:layout_constraintTop_toBottomOf="@id/tv_order_time"
+        app:layout_constraintLeft_toRightOf="@id/tv_user_name"
+        android:textSize="13sp"
+        android:text="拍下了"/>
+
+
+    <TextView
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_buy_coin_num"
+        app:layout_constraintTop_toBottomOf="@id/tv_order_time"
+        app:layout_constraintLeft_toRightOf="@id/tv_buy_coin"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:text="50"/>
+
+
+    <TextView
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_buy_coin_end_info"
+        app:layout_constraintTop_toBottomOf="@id/tv_order_time"
+        app:layout_constraintLeft_toRightOf="@id/tv_buy_coin_num"
+        android:textSize="13sp"
+        android:text="个AB,请尽快确认款项并放行"
+        />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_left_arrow"
+        />
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="6dp"
+        android:background="#F6F5FA"/>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DataCountActivity">
+
+    <include layout="@layout/title_bar2"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_root_view">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                app:layout_constraintTop_toBottomOf="@id/cl_root_view"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.08"
+                android:id="@+id/rl_total_income"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/totalIncome"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv_1"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textColor="#222222"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_total_income_money"
+                    android:textStyle="bold"
+                    android:text="9999"
+                    android:layout_toRightOf="@id/tv_1"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="18sp"
+                    android:textColor="#222222"
+                    android:gravity="center_vertical"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/coinUnit"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@id/tv_total_income_money"
+                    android:id="@+id/tv_2"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textColor="#222222"
+                    />
+
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TabLayout
+                app:layout_constraintTop_toBottomOf="@id/rl_total_income"
+                android:id="@+id/tab_layout_total_income"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.06"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                app:tabIndicatorColor="#4A4A4A"
+                app:tabSelectedTextColor="#587BFC"
+                app:tabMode="fixed"
+                app:tabTextColor="#4A4A4A" />
+
+            <android.support.v4.view.ViewPager
+                app:layout_constraintTop_toBottomOf="@id/tab_layout_total_income"
+                android:id="@+id/view_pager_total_income"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.32"
+                android:background="#F5F8FD"
+                />
+
+
+            <RelativeLayout
+                app:layout_constraintTop_toBottomOf="@id/view_pager_total_income"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.08"
+                android:id="@+id/rl_total_order_num"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/totalOrder"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv_2_1"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textColor="#222222"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_total_order_num"
+                    android:textStyle="bold"
+                    android:text="999"
+                    android:layout_toRightOf="@id/tv_2_1"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="18sp"
+                    android:textColor="#222222"
+                    android:gravity="center_vertical"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/coinUnit2"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@id/tv_total_order_num"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textColor="#222222"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <android.support.design.widget.TabLayout
+                app:layout_constraintTop_toBottomOf="@id/rl_total_order_num"
+                android:id="@+id/tab_layout_total_order"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.06"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                app:tabIndicatorColor="#587BFC"
+                app:tabSelectedTextColor="#587BFC"
+                app:tabMode="fixed"
+                app:tabTextColor="#4A4A4A"  />
+
+
+            <android.support.v4.view.ViewPager
+                app:layout_constraintTop_toBottomOf="@id/tab_layout_total_order"
+                android:id="@+id/view_pager_total_order"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.32"
+                android:background="#F5F8FD"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="22dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_style_15sp_gray_3"
+        android:text="兑换比特币"
+        android:id="@+id/tv_trade_title"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="22dp"
+        style="@style/text_style_14sp_gray_6"
+        android:text="2018.12.23 10:32:30"
+        android:layout_below="@id/tv_trade_title"
+        android:id="@+id/tv_trade_time"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        style="@style/text_style_17sp_red"
+        android:text="-100 AB"
+        android:id="@+id/tv_trade_coin_num"
+        />
+
+
+
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F6F5FA"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/line5"
+        />
+
+
+
+</RelativeLayout>

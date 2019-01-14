@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_14sp_blue3"
+            android:text="@string/ab"/>
+
+        <TextView
+            android:id="@+id/tv_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_14sp_gray_8"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22dp"
+            android:text="处理中"
+            />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/rl_to_detail_page">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/text_style_15sp_blue3"
+            android:text="1898 AB = 0.6 BTC"
+            android:id="@+id/tv_ab_to_btc"/>
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:id="@+id/iv_right_arrow"
+            android:src="@drawable/btn_right"
+            />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F6F5FA"
+        android:id="@+id/line5"
+        />
+
+
+
+</LinearLayout>

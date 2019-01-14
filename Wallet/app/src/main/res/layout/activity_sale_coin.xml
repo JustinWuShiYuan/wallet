@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.SaleCoinActivity">
+
+        <include layout="@layout/title_bar2"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#F6F5FA"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.86"
+            android:background="#ffffff"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--货币类型选择 开始 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:background="#ffffff">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:id="@+id/rl_select_coin_type"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/shape_gray_bg">
+
+
+                        <TextView
+                            android:id="@+id/tv_select_coin_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/chooseCoinType"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:textColor="#222222"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_coin_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/coinType"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical"
+                            android:textColor="#222222"
+                            android:layout_marginRight="15dp"
+                            />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_below="@id/rl_select_coin_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:id="@+id/rl_select_money_type"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/shape_gray_bg">
+
+                        <TextView
+                            android:id="@+id/tv_select_money_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/chooseMoneyType"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:textColor="#222222"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_money_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/moneyType"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical"
+                            android:textColor="#222222"
+                            android:layout_marginRight="15dp"
+                            />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_below="@id/rl_select_money_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:id="@+id/rl_unit_price"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/shape_white_bg">
+
+                        <TextView
+                            android:id="@+id/tv_unit_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/unitPrice"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:textColor="#222222"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_sale_nums"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/exchangeMoneyRate"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical"
+                            android:textColor="#222222"
+                            android:layout_marginRight="15dp"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <!--货币类型选择 结束 -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#F6F5FA"
+                    />
+
+                <!--交易方案 开始 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="363dp"
+                    android:background="#ffffff"
+                    >
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tab_layout_trade"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="92dp"
+                        android:layout_marginRight="92dp"
+                        app:tabIndicatorColor="#4A4A4A"
+                        app:tabSelectedTextColor="#587BFC"
+                        app:tabMode="fixed"
+                        app:tabTextColor="#4A4A4A"
+                        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+                        app:tabIndicatorHeight="0dp"
+                        android:visibility="gone"
+                        />
+
+                    <include layout="@layout/tab_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginLeft="35dp"/>
+
+
+                    <View
+                        android:id="@+id/line4"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#F6F5FA"
+                        android:layout_below="@id/ll_tab_title_root"
+                        />
+
+                    <com.tong.gao.wallet.view.NoScrollViewPager
+                        android:layout_below="@id/line4"
+                        android:id="@+id/view_pager_trade"
+                        android:layout_width="fill_parent"
+                        android:layout_height="322dp"
+                        />
+
+                </RelativeLayout>
+
+                <!--交易方案 结束 -->
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#F6F5FA"
+                    />
+
+                <!--支付方式 开始 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="566dp"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="75dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/payType"
+                        android:textColor="#999999"
+                        android:textSize="15sp"/>
+
+
+                    <RelativeLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="29dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/icon_zfb"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="33dp"
+                            android:text="@string/payTypeZFB"
+                            android:gravity="center"/>
+
+                        <com.suke.widget.SwitchButton
+                            xmlns:switchButton="http://schemas.android.com/apk/res-auto"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="24dp"
+                            android:id="@+id/switch_button_zfb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            switchButton:sb_checked_color="@color/colorBlue2"
+                            android:scaleX="0.8"
+                            android:scaleY="0.8"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="29dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/icon_wechat"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="33dp"
+                            android:text="@string/payTypeWeChat"
+                            android:gravity="center"/>
+
+                        <com.suke.widget.SwitchButton
+                            xmlns:switchButton="http://schemas.android.com/apk/res-auto"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="24dp"
+                            android:id="@+id/switch_button_we_chat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            switchButton:sb_checked_color="@color/colorBlue2"
+                            android:scaleX="0.8"
+                            android:scaleY="0.8"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="29dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/icon_bank"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="33dp"
+                            android:text="@string/payTypeBank"
+                            android:gravity="center"/>
+
+                        <com.suke.widget.SwitchButton
+                            xmlns:switchButton="http://schemas.android.com/apk/res-auto"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="24dp"
+                            android:id="@+id/switch_button_bank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            switchButton:sb_checked_color="@color/colorBlue2"
+                            android:scaleX="0.8"
+                            android:scaleY="0.8"/>
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_width="75dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/fastReply"
+                        android:textColor="#999999"
+                        android:textSize="15sp"/>
+
+
+                    <EditText
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="82dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:id="@+id/et_fast_reply"
+                        android:hint="@string/fastReplyHint"
+                        android:background="@drawable/shape_gray_bg"
+                        android:drawablePadding="10dp"
+                        android:gravity="top|left"
+                        android:singleLine="false"
+                        android:padding="4dp"
+                        android:textSize="14sp"/>
+
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="75dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/buyLimit"
+                        android:textColor="#999999"
+                        android:textSize="15sp"/>
+
+
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="26dp"
+                        android:text="需要对方通过高级认证"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/cb_height_authentication"
+                        style="@style/MyCheck_Box"
+                        android:textColor="@color/gray_3"
+                        />
+
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="26dp"
+                        android:text="不与平台其他商户交易"
+                        android:id="@+id/cb_no_trade_other_platform"
+                        android:paddingLeft="10dp"
+                        style="@style/MyCheck_Box"
+                        android:textColor="@color/gray_3"
+                        />
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        >
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="我已经阅读和同意"
+                            android:paddingLeft="10dp"
+                            style="@style/MyCheck_Box"
+                            android:id="@+id/cb_agree_protocol"
+                            android:textColor="@color/gray_3"
+                            android:gravity="center"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/tv_trade_protocol"
+                            android:layout_toRightOf="@id/cb_agree_protocol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:text="&#60;&#60;交易规则&#62;&#62;"
+                            android:textColor="@color/colorBlue2"
+                            android:gravity="center"
+                            android:textSize="14sp"/>
+
+
+                    </RelativeLayout>
+
+
+                    <Button
+                        android:layout_marginTop="22dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:text="@string/publishAdvertisement"
+                        android:background="@drawable/shape_gray2_bg"
+                        android:textSize="15sp"
+                        android:textColor="#ffffff"
+                        android:id="@+id/btn_publish_advertisement"
+                        />
+
+
+
+                </LinearLayout>
+
+                <!--支付方式 结束 -->
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/rl_safe_root_view"
+        android:background="#88888888"
+        >
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="285dp"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/ll_safe_root_view">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginLeft="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textColor="#232630"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:text="@string/safeVerifier"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="#666666"
+                    android:textSize="17sp"
+                    android:id="@+id/tv_cancel_verify"
+                    android:text="@string/cancelVerifier"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"/>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E8E9ED"
+                />
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                >
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#232630"
+                    android:textSize="17sp"
+                    android:text="@string/payPwd"
+                    android:id="@+id/tv_payment_pwd"
+                    android:layout_marginLeft="30dp"/>
+
+                <EditText
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_below="@id/tv_payment_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="#666666"
+                    android:textSize="17sp"
+                    android:id="@+id/et_payment_pwd"
+                    android:hint="@string/payPwdHint"
+                    android:layout_marginRight="30dp"
+                   />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E8E9ED"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                >
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#232630"
+                    android:textSize="17sp"
+                    android:text="@string/googleVerifierCode"
+                    android:id="@+id/tv_google_pwd"
+                    android:layout_marginLeft="30dp"/>
+
+                <EditText
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_below="@id/tv_google_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="#666666"
+                    android:textSize="17sp"
+                    android:id="@+id/et_google_pwd"
+                    android:hint="@string/googleCodeHint"
+                    android:layout_marginRight="30dp"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/btnSure"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:background="@drawable/shape_blue_bg"
+                android:id="@+id/btn_sure_safe_code"
+                />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

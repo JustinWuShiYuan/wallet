@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include layout="@layout/title_bar2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        />
+
+    <FrameLayout
+        android:layout_below="@id/cl_root_view"
+        android:id="@+id/fl_tab_base_pager_content2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+    </FrameLayout>
+
+
+
+    <ImageView
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/iv_create_advertisement"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/icon_user_alter"
+        android:visibility="gone"/>
+
+</RelativeLayout>
