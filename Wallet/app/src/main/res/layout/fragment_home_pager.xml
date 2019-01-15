@@ -2,283 +2,284 @@
 <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/srl_refresh_root_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
-    <android.support.constraint.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorWhite"
-        android:layout_marginBottom="@dimen/rc_dimen_size_50">
+        android:layout_marginBottom="@dimen/rc_dimen_size_50"
+        android:background="@color/colorWhite">
 
 
-        <!--今日收入 和本月收入 开始 -->
-        <LinearLayout
-            android:id="@+id/ll_income_container"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:paddingBottom="5dp"
-            app:layout_constraintHeight_percent="0.2">
+
+
+            <!--今日收入 和本月收入 开始 -->
+            <LinearLayout
+                android:id="@+id/ll_income_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                app:layout_constraintHeight_percent="0.2">
+
+                <RelativeLayout
+                    android:id="@+id/rl_today_income"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_today_income"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/todayIncome"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_today_income_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_today_income"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="9999"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_yesterday_income_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_today_income_money"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center_horizontal"
+                        android:text="昨日 99"
+                        android:textColor="#9B9B9B"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_month_income"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_month_income"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/thisMonthIncome"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_today_month_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_month_income"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="9999"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_last_month_income_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_today_month_money"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="上月 99"
+                        android:textColor="#9B9B9B"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!--今日收入 和本月收入 结束  F6F5FA-->
+
+            <View
+                android:id="@+id/empty_line_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#F6F5FA"
+                app:layout_constraintHeight_percent="0.016"
+                app:layout_constraintTop_toBottomOf="@id/ll_income_container" />
+
+            <!--买币 我的订单 数据统计 兑换比特币 开始 -->
+            <LinearLayout
+                android:id="@+id/ll_professional_work_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintHeight_percent="0.27"
+                app:layout_constraintTop_toBottomOf="@id/empty_line_1">
+
+                <RelativeLayout
+                    android:id="@+id/rl_sale_coin_container"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_sale_coin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="30dp"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:src="@drawable/icon_sale_coin" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_sale_coin"
+                        android:layout_marginTop="-35dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/saleCoin" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_order_container"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_my_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="30dp"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:src="@drawable/icon_my_order" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_my_order"
+                        android:layout_marginTop="-35dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/myOrder" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_data_count_container"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_data_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="30dp"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:src="@drawable/icon_data_count" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_data_count"
+                        android:layout_marginTop="-35dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/dataCount" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_exchange_coin_container"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_exchange_coin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="30dp"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:src="@drawable/icon_exchange_coin" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_exchange_coin"
+                        android:layout_marginTop="-35dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/exchangeCoin" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--买币 我的订单 数据统计 兑换比特币 结束 -->
+            <View
+                android:id="@+id/empty_line_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#F6F5FA"
+                app:layout_constraintHeight_percent="0.016"
+                app:layout_constraintTop_toBottomOf="@id/ll_professional_work_container" />
+
 
             <RelativeLayout
-                android:id="@+id/rl_today_income"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:id="@+id/rl_pending_order"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/empty_line_2">
+
+                <ImageView
+                    android:id="@+id/iv_pending_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_pending_order" />
 
                 <TextView
-                    android:id="@+id/tv_today_income"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center_horizontal"
-                    android:text="@string/todayIncome"
-                    android:textColor="#000000"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/tv_today_income_money"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_today_income"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center_horizontal"
-                    android:text="9999"
-                    android:textColor="#000000"
-                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/iv_pending_order"
+                    android:gravity="center_vertical"
+                    android:text="@string/pendingOrder"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tv_yesterday_income_money"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_today_income_money"
-                    android:layout_marginTop="6dp"
-                    android:gravity="center_horizontal"
-                    android:text="昨日 99"
-                    android:textColor="#9B9B9B"
-                    android:textSize="12sp" />
-
             </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/rl_month_income"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/tv_month_income"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center_horizontal"
-                    android:text="@string/thisMonthIncome"
-                    android:textColor="#000000"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/tv_today_month_money"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_month_income"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center_horizontal"
-                    android:text="9999"
-                    android:textColor="#000000"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_last_month_income_money"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_today_month_money"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center_horizontal"
-                    android:text="上月 99"
-                    android:textColor="#9B9B9B"
-                    android:textSize="12sp" />
-
-
-            </RelativeLayout>
-
-        </LinearLayout>
-        <!--今日收入 和本月收入 结束  F6F5FA-->
-
-        <View
-            android:id="@+id/empty_line_1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="#F6F5FA"
-            app:layout_constraintHeight_percent="0.016"
-            app:layout_constraintTop_toBottomOf="@id/ll_income_container" />
-
-        <!--买币 我的订单 数据统计 兑换比特币 开始 -->
-        <LinearLayout
-            android:id="@+id/ll_professional_work_container"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            app:layout_constraintHeight_percent="0.27"
-            app:layout_constraintTop_toBottomOf="@id/empty_line_1">
-
-            <RelativeLayout
-                android:id="@+id/rl_sale_coin_container"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/iv_sale_coin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="30dp"
-                    android:scaleX="0.7"
-                    android:scaleY="0.7"
-                    android:src="@drawable/icon_sale_coin" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/iv_sale_coin"
-                    android:layout_marginTop="-35dp"
-                    android:gravity="center_horizontal"
-                    android:text="@string/saleCoin" />
-
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:id="@+id/rl_my_order_container"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/iv_my_order"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="30dp"
-                    android:scaleX="0.7"
-                    android:scaleY="0.7"
-                    android:src="@drawable/icon_my_order" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/iv_my_order"
-                    android:layout_marginTop="-35dp"
-                    android:gravity="center_horizontal"
-                    android:text="@string/myOrder" />
-
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:id="@+id/rl_data_count_container"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/iv_data_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="30dp"
-                    android:scaleX="0.7"
-                    android:scaleY="0.7"
-                    android:src="@drawable/icon_data_count" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/iv_data_count"
-                    android:layout_marginTop="-35dp"
-                    android:gravity="center_horizontal"
-                    android:text="@string/dataCount" />
-
-
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:id="@+id/rl_exchange_coin_container"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/iv_exchange_coin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="30dp"
-                    android:scaleX="0.7"
-                    android:scaleY="0.7"
-                    android:src="@drawable/icon_exchange_coin" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/iv_exchange_coin"
-                    android:layout_marginTop="-35dp"
-                    android:gravity="center_horizontal"
-                    android:text="@string/exchangeCoin" />
-
-            </RelativeLayout>
-
-        </LinearLayout>
-
-        <!--买币 我的订单 数据统计 兑换比特币 结束 -->
-        <View
-            android:id="@+id/empty_line_2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="#F6F5FA"
-            app:layout_constraintHeight_percent="0.016"
-            app:layout_constraintTop_toBottomOf="@id/ll_professional_work_container" />
-
-
-        <RelativeLayout
-            android:id="@+id/rl_pending_order"
-            android:layout_width="match_parent"
-            android:layout_height="26dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintTop_toBottomOf="@id/empty_line_2">
-
-            <ImageView
-                android:id="@+id/iv_pending_order"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_pending_order" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_toRightOf="@id/iv_pending_order"
-                android:gravity="center_vertical"
-                android:text="@string/pendingOrder"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
 
 
         <android.support.v7.widget.RecyclerView

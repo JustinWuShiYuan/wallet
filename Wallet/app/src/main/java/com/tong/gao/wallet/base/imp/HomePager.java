@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -26,6 +27,7 @@ import com.tong.gao.wallet.constants.MyConstant;
 import com.tong.gao.wallet.event.HomePagerEvent;
 import com.tong.gao.wallet.factory.MiddleViewFactory;
 import com.tong.gao.wallet.factory.ThreadPoolFactory;
+import com.tong.gao.wallet.utils.LogUtils;
 import com.tong.gao.wallet.utils.TimeUtils;
 import com.tong.gao.wallet.utils.UIUtils;
 
@@ -176,6 +178,31 @@ public class HomePager extends TabBasePager implements View.OnClickListener, Swi
 
         recyclerView.setHasFixedSize(true);
 
+
+        final int[] i = {0};
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+                LogUtils.d("ssssssssssss","i:"+(i[0]++)+"  getScollYDistance():"+getScollYDistance());
+                if(getScollYDistance() > 110){
+                    ViewPager.LayoutParams layoutParams = (ViewPager.LayoutParams) getRootView().getLayoutParams();
+//                    layoutParams.layoutAnimationParameters
+//                            layoutParams.height = layoutParams.height+getScollYDistance();
+//                    layoutParams.topMargin = -getScollYDistance();
+
+                    getRootView().setLayoutParams(layoutParams);
+
+                    getRootView().requestLayout();
+                }
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
+
     }
 
     //TODO 收到变更的服务通知，请求数据 刷新页面
@@ -197,6 +224,7 @@ public class HomePager extends TabBasePager implements View.OnClickListener, Swi
 
             case R.id.rl_sale_coin_container:       //卖币
                 mContext.startActivity(new Intent(mContext,SaleCoinActivity.class));
+
                 break;
 
             case R.id.rl_my_order_container:       //我的订单
@@ -212,6 +240,7 @@ public class HomePager extends TabBasePager implements View.OnClickListener, Swi
 
             case R.id.rl_exchange_coin_container:    //兑换比特币
                 mContext.startActivity(new Intent(mContext,ConvertCoinActivity.class));
+
                 break;
 
         }
@@ -319,6 +348,28 @@ public class HomePager extends TabBasePager implements View.OnClickListener, Swi
 
         }
     }
+
+
+    private int getScollYDistance() {
+        LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+        int position = layoutManager.findFirstVisibleItemPosition();
+        View firstVisiableChildView = layoutManager.findViewByPosition(position);
+        int itemHeight = firstVisiableChildView.getHeight();
+        return (position) * itemHeight - firstVisiableChildView.getTop();
+    }
+
+
+//    private int getDistance(){
+//        LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+//        View firstVisibItem = recyclerView.getChildAt(0);
+//        int firstItemPosition = layoutManager.findFirstVisibleItemPosition();
+//        int itemCount = layoutManager.getItemCount();
+//        int recycleViewHeight = recyclerView.getHeight();
+//        int itemHeight = firstVisibItem.getHeight();
+//        int firstItemBottom = layoutManager.getDecoratedBottom(firstVisibItem);
+//        return (itemCount - firstItemPosition - 1)* itemHeight - recycleViewHeight;
+//    }
+
 
 
     @Override
