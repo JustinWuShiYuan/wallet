@@ -78,52 +78,66 @@ public class LoginActivity extends BaseActivity {
     private void toLogin(final String loginName, final String loginPwd) {
         loginDialog(true);
 
+
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
         finish();
 
-//        ThreadPoolFactory.getExecutorService().execute(new Runnable() {
-//            @Override
-//            public void run() {
-//                NetWorks.login(new RequestLoginInfoBean(loginName, loginPwd), new Observer<LoginResponseInfo>() {
-//                    @Override
-//                    public void onSubscribe(Disposable d) {
-//                    }
-//
-//                    @Override
-//                    public void onNext(LoginResponseInfo loginResponseInfo) {
-//
-//                        loginDialog(false);
-//
-//                        if (null != loginResponseInfo.getUserinfo() && loginResponseInfo.getUserinfo().getSafeverifyswitch()
-//                                .equals(MyConstant.googleVerifyIsOpened)) {//开了谷歌验证
-//
-//                            Intent intent = new Intent(LoginActivity.this, SecondVerifyActivity.class);
-//                            startActivity(intent);
-//                            finish();
-//
-//                        } else {
-//
-//                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-//                            startActivity(intent);
-//                            finish();
-//                        }
-//
-//
-//                    }
-//
-//                    @Override
-//                    public void onError(Throwable e) {
-//                        LogUtils.d("e:" + e.toString());
-//                    }
-//
-//                    @Override
-//                    public void onComplete() {
-//                        LogUtils.d("订阅完成....");
-//                    }
-//                });
-//            }
-//        });
+
+        loginDialog(false);
+        overridePendingTransition(android.R.anim.fade_in,
+                android.R.anim.fade_out);
+
+
+
+        ThreadPoolFactory.getExecutorService().execute(new Runnable() {
+            @Override
+            public void run() {
+                NetWorks.login(new RequestLoginInfoBean(loginName, loginPwd), new Observer<LoginResponseInfo>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                    }
+
+                    @Override
+                    public void onNext(LoginResponseInfo loginResponseInfo) {
+
+
+
+                        if (null != loginResponseInfo.getUserinfo() && loginResponseInfo.getUserinfo().getSafeverifyswitch()
+                                .equals(MyConstant.googleVerifyIsOpened)) {//开了谷歌验证
+
+                            Intent intent = new Intent(LoginActivity.this, SecondVerifyActivity.class);
+                            startActivity(intent);
+                            finish();
+
+
+
+                        } else {
+
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+
+                        loginDialog(false);
+                        overridePendingTransition(android.R.anim.fade_in,
+                                android.R.anim.fade_out);
+
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        LogUtils.d("e:" + e.toString());
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        LogUtils.d("订阅完成....");
+                    }
+                });
+            }
+        });
     }
 
     AlertDialog.Builder builder;
