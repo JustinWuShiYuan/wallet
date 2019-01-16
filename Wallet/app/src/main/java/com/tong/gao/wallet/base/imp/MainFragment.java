@@ -97,7 +97,8 @@ public class MainFragment extends BaseFragment implements  RadioGroup.OnCheckedC
     public void initData() {
         pagerList = new ArrayList<>();
 
-        pagerList.add(HomePager.newInstance(MyConstant.Tab_1));
+//        pagerList.add(HomePager.newInstance(MyConstant.Tab_1));
+        pagerList.add(new HomeFragment());
         pagerList.add(TradePager.newInstance(MyConstant.Tab_2));
         pagerList.add(MessagePager.newInstance(MyConstant.Tab_3));
         pagerList.add(MyInfoPager.newInstance(MyConstant.Tab_2));
@@ -118,7 +119,7 @@ public class MainFragment extends BaseFragment implements  RadioGroup.OnCheckedC
         vpContainer.setOffscreenPageLimit(4);
 
         rgFragmentContainer.check(R.id.rb_fragment_home); // 设置默认选中的是home页签
-        ((TabBasePager)pagerList.get(0)).initData();
+        ((HomeFragment)pagerList.get(0)).initData();
         rgFragmentContainer.setOnCheckedChangeListener(this);
 
     }
