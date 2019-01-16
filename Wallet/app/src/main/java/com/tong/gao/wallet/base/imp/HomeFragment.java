@@ -12,6 +12,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,7 @@ import java.util.concurrent.TimeUnit;
 public class HomeFragment extends Fragment implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
 
     private Context mContext;
+    private int scrollState;
     RecyclerView recyclerView;
     LinearLayout rlSaleCoinContainer;
     LinearLayout rlMyOrderContainer;
@@ -56,7 +58,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = LayoutInflater.from(mContext).inflate(R.layout.fragment_home_pager_new, null);
-        recyclerView = rootView.findViewById(R.id.rv_root_view);
         rlSaleCoinContainer = rootView.findViewById(R.id.rl_sale_coin_container);
         rlSaleCoinContainer.setOnClickListener(this);
 
@@ -71,8 +72,22 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
 
         LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(mContext);
         mLinearLayoutManager.setSmoothScrollbarEnabled(true);
+        recyclerView = rootView.findViewById(R.id.rv_root_view);
         recyclerView.setLayoutManager(mLinearLayoutManager);
         recyclerView.setHasFixedSize(true);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+//                Log.e("HomeFragment", String.format("newState: %s", newState));
+                scrollState = newState;
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
         initData();
         return rootView;
     }
@@ -248,7 +263,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
             UIUtils.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    recyclerView.getAdapter().notifyDataSetChanged();
+                    if (scrollState == 0) {
+                        recyclerView.getAdapter().notifyDataSetChanged();
+                    }
                 }
             });
 
