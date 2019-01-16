@@ -1,6 +1,7 @@
 package com.tong.gao.wallet.base.imp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -14,10 +15,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tong.gao.wallet.R;
+import com.tong.gao.wallet.activity.ConvertCoinActivity;
+import com.tong.gao.wallet.activity.DataCountActivity;
+import com.tong.gao.wallet.activity.MyOrderActivity;
+import com.tong.gao.wallet.activity.SaleCoinActivity;
 import com.tong.gao.wallet.bean.PendingOrderBean;
 import com.tong.gao.wallet.factory.ThreadPoolFactory;
 import com.tong.gao.wallet.utils.TimeUtils;
@@ -32,6 +39,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
 
     private Context mContext;
     RecyclerView recyclerView;
+    LinearLayout rlSaleCoinContainer;
+    LinearLayout rlMyOrderContainer;
+    LinearLayout rlDataCountContainer;
+    LinearLayout rlExchangeCoinContainer;
     private List<PendingOrderBean> pendingOrderBeanList = new ArrayList<>();
 
 
@@ -46,6 +57,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = LayoutInflater.from(mContext).inflate(R.layout.fragment_home_pager_new, null);
         recyclerView = rootView.findViewById(R.id.rv_root_view);
+        rlSaleCoinContainer = rootView.findViewById(R.id.rl_sale_coin_container);
+        rlSaleCoinContainer.setOnClickListener(this);
+
+        rlMyOrderContainer = rootView.findViewById(R.id.rl_my_order_container);
+        rlMyOrderContainer.setOnClickListener(this);
+
+        rlDataCountContainer = rootView.findViewById(R.id.rl_data_count_container);
+        rlDataCountContainer.setOnClickListener(this);
+
+        rlExchangeCoinContainer = rootView.findViewById(R.id.rl_exchange_coin_container);
+        rlExchangeCoinContainer.setOnClickListener(this);
+
         LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(mContext);
         mLinearLayoutManager.setSmoothScrollbarEnabled(true);
         recyclerView.setLayoutManager(mLinearLayoutManager);
@@ -61,7 +84,27 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.rl_sale_coin_container:       //卖币
+                mContext.startActivity(new Intent(mContext, SaleCoinActivity.class));
+                break;
 
+            case R.id.rl_my_order_container:       //我的订单
+
+                mContext.startActivity(new Intent(mContext, MyOrderActivity.class));
+
+                break;
+
+            case R.id.rl_data_count_container:       //数据统计
+                mContext.startActivity(new Intent(mContext, DataCountActivity.class));
+
+                break;
+
+            case R.id.rl_exchange_coin_container:    //兑换比特币
+                mContext.startActivity(new Intent(mContext, ConvertCoinActivity.class));
+                break;
+
+        }
     }
 
 
@@ -123,8 +166,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
 
     public void initData() {
         //模拟网路请求 获取待处理订单的数据
-//        getPendingOrderDataFromServer(0);
-        createFakeData();
+        getPendingOrderDataFromServer(0);
+//        createFakeData();
         mHandler.sendMessageDelayed(mHandler.obtainMessage(), 1000);
     }
 
